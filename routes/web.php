@@ -21,5 +21,6 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth']], function () {
     Route::get('/pembayaran', [PembayaranController::class, 'index'])->name('pembayaran.index');
     // Route::resource('/pembayaran', PembayaranController::class);
     // Route::get('pembayaran/print', [LaporanController::class, 'laporan'])->name('pembayaran.print');
+    Route::get('/pembayaran/pdf', [App\Http\Controllers\PembayaranController::class, 'exportPdf'])->name('pembayaran.pdf');
 
 });

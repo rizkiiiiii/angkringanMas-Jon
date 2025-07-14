@@ -4,9 +4,10 @@
         <div class="col-md-12">
             <div class="card mt-3">
                 <div class="card-header justify-content-between">
-                <a href="/" class="btn btn-sm btn-primary">
+                {{-- <a href="/" class="btn btn-sm btn-primary">
                     Buat Laporan
-                </a>
+                </a> --}}
+                <a href="{{ route('pembayaran.pdf') }}" class="btn btn-sm btn-danger">Export PDF</a>
             </div>
                 <div class="card-header">
                     
