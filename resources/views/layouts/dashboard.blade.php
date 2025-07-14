@@ -102,25 +102,25 @@
                   <script>
                     document.write(new Date().getFullYear());
                   </script>
-                  , made with ❤️ by
-                  <a href="https://themeselection.com" target="_blank" class="footer-link fw-bolder">ThemeSelection</a>
+                  , made with ❤️ for
+                  <a href="/" target="_blank" class="footer-link fw-bolder">Angkringan Mas Jo</a>
                 </div>
-                <div>
+                {{-- <div>
                   <a href="https://themeselection.com/license/" class="footer-link me-4" target="_blank">License</a>
-                  <a href="https://themeselection.com/" target="_blank" class="footer-link me-4">More Themes</a>
+                  <a href="https://themeselection.com/" target="_blank" class="footer-link me-4">More Themes</a> --}}
 
-                  <a
+                  {{-- <a
                     href="https://themeselection.com/demo/sneat-bootstrap-html-admin-template/documentation/"
                     target="_blank"
                     class="footer-link me-4"
                     >Documentation</a
-                  >
+                  > --}}
 
                   <a
-                    href="https://github.com/themeselection/sneat-html-admin-template-free/issues"
+                    href="https://saweria.co/ManThings"
                     target="_blank"
                     class="footer-link me-4"
-                    >Support</a
+                    >Support For Us</a
                   >
                 </div>
               </div>
@@ -169,5 +169,7 @@
 
     <!-- Place this tag in your head or just before your close body tag. -->
     <script async defer src="https://buttons.github.io/buttons.js')}}"></script>
+
+    @yield('personalscript')
   </body>
 </html>

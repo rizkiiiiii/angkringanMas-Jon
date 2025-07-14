@@ -22,18 +22,27 @@ class UsersSeeder extends Seeder
         Role::create([
             'nama' => 'owner',
         ]);
+        Role::create([
+            'nama' => 'pelanggan',
+        ]);
 
         User::create([
             'nama'     => 'Owner',
             'email'    => 'Masjon@gmail.com',
             'password' => bcrypt('Masjon123'),
-            'role_id'  => 1,
+            'role_id'  => 3,
         ]);
         User::create([
             'nama'     => 'Kasir',
             'email'    => 'Kasir@gmail.com',
             'password' => bcrypt('Kasir123'),
             'role_id'  => 2,
+        ]);
+        User::create([
+            'nama'     => 'pelayan',
+            'email'    => 'Pelayan@gmail.com',
+            'password' => bcrypt('Pelayan'),
+            'role_id'  => 1,
         ]);
 
     }

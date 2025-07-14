@@ -1,6 +1,9 @@
 <?php
 namespace App\Http\Controllers;
 
+use App\Models\Menu;
+use App\Models\Order;
+
 class HomeController extends Controller
 {
     /**
@@ -20,6 +23,11 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $jumlah_menu        = Menu::all()->count();
+        $transaksi_proses   = Order::where('status', 'Proses')->get()->count();
+        $transaksi_berhasil = Order::where('status', 'Berhasil')->get()->count();
+        $total_keseluruhan  = Order::sum('total');
+        return view('admin.index', compact('jumlah_menu', 'transaksi_proses', 'transaksi_berhasil'
+            , 'total_keseluruhan'));
     }
 }

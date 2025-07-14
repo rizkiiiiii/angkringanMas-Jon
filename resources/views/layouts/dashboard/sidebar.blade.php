@@ -69,19 +69,13 @@
     <ul class="menu-inner py-1">
       <!-- Dashboard -->
       <li class="menu-item active">
-        <a href="index.html" class="menu-link">
+        <a href="{{route('index')}}" class="menu-link">
           <i class="menu-icon tf-icons bx bx-home-circle"></i>
           <div data-i18n="Analytics">Dashboard</div>
         </a>
       </li>
 
       <!-- Layouts -->
-      <li class="menu-item">
-        <a href="javascript:void(0);" class="menu-link menu-toggle">
-          <i class="menu-icon tf-icons bx bx-layout"></i>
-          <div data-i18n="Layouts">Layouts</div>
-        </a>
-
         <ul class="menu-sub">
           <li class="menu-item">
             <a href="layouts-without-menu.html" class="menu-link">
@@ -114,30 +108,32 @@
         <span class="menu-header-text">Pages</span>
           @if (auth::user()->role->nama == 'pelayan' || auth::user()->role->nama == 'owner')
           <li class="menu-item">
-            <a href="cards-basic.html" class="menu-link">
+            <a href="/admin/menu" class="menu-link">
               <i class="menu-icon tf-icons bx bx-collection"></i>
               <div data-i18n="Basic">Menu</div>
             </a>
           </li>
           <li class="menu-item">
-            <a href="cards-basic.html" class="menu-link">
+            <a href="/admin/transaksi" class="menu-link">
               <i class="menu-icon tf-icons bx bx-collection"></i>
               <div data-i18n="Basic">Transaksi</div>
             </a>
           </li>
           @endif
-        <li class="menu-item">
-          <a href="cards-basic.html" class="menu-link">
-            <i class="menu-icon tf-icons bx bx-collection"></i>
-            <div data-i18n="Basic">Pembayaran</div>
-          </a>
-        </li>
-        <li class="menu-item">
+          @if (auth::user()->role->nama == 'kasir' || auth::user()->role->nama == 'owner')
+            <li class="menu-item">
+              <a href="/admin/pembayaran" class="menu-link">
+                <i class="menu-icon tf-icons bx bx-collection"></i>
+                <div data-i18n="Basic">Pembayaran</div>
+              </a>
+            </li>
+          @endif
+        {{-- <li class="menu-item">
           <a href="cards-basic.html" class="menu-link">
             <i class="menu-icon tf-icons bx bx-collection"></i>
             <div data-i18n="Basic">Pegawai</div>
           </a>
-        </li>
+        </li> --}}
       </li>
       <!-- Components -->
       <li class="menu-header small text-uppercase"><span class="menu-header-text">Components</span></li>

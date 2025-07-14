@@ -14,8 +14,9 @@ return new class extends Migration
         Schema::create('orders', function (Blueprint $table) {
             $table->id();
             $table->foreignId('user_id')->constrained();
+            $table->string('nama_pelanggan');
             $table->decimal('total', 10, 2);
-            $table->string('status')->default('pending');
+            $table->enum('status', ['Berhasil', 'Proses']);
             $table->text('deskripsi')->nullable();
             $table->timestamps();
         });
@@ -27,5 +28,6 @@ return new class extends Migration
     public function down(): void
     {
         Schema::dropIfExists('orders');
+
     }
 };

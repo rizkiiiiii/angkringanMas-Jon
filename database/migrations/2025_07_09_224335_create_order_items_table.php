@@ -14,10 +14,10 @@ return new class extends Migration
         Schema::create('order_items', function (Blueprint $table) {
             $table->id();
             $table->foreignId('order_id')->constrained();
+            $table->foreignId('menu_id')->constrained();
             $table->integer('jumlah');
             $table->decimal('harga_satuan', 10, 2);
             $table->decimal('subtotal', 10, 2);
-
             $table->timestamps();
         });
     }

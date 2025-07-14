@@ -76,5 +76,6 @@
             @yield('content')
         </main>
     </div>
+    @yield('personalscript')
 </body>
 </html>

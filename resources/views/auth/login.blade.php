@@ -136,13 +136,13 @@
                 </a>
               </div>
               <!-- /Logo -->
-              <h4 class="mb-2">Welcome to Sneat! 👋</h4>
-              <p class="mb-4">Please sign-in to your account and start the adventure</p>
+              <h4 class="mb-2">Selamat Datang Di APLIKASI ANGKRINGAN MAS JON</h4>
+              <p class="mb-4">LOGIN TERLEBIH DAHULU UNTUK MENGAKSES APLIKASI</p>
 
               <form id="formAuthentication" class="mb-3" action="{{route('login')}}" method="POST">
                     @csrf
                 <div class="mb-3">
-                  <label for="email" class="form-label">Email or Username</label>
+                  <label for="email" class="form-label">Email</label>
                   <input
                     type="text"
                     class="form-control  @error('email') is-invalid @enderror"
@@ -161,7 +161,7 @@
                   <div class="d-flex justify-content-between">
                     <label class="form-label" for="password">Password</label>
                     <a href="auth-forgot-password-basic.html">
-                      <small>Forgot Password?</small>
+                      <small>Lupa Password?</small>
                     </a>
                   </div>
                   <div class="input-group input-group-merge">
@@ -191,13 +191,6 @@
                   <button class="btn btn-primary d-grid w-100" type="submit">Sign in</button>
                 </div>
               </form>
-
-              <p class="text-center">
-                <span>New on our platform?</span>
-                <a href="auth-register-basic.html">
-                  <span>Create an account</span>
-                </a>
-              </p>
             </div>
           </div>
           <!-- /Register -->

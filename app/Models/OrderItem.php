@@ -9,4 +9,10 @@ class OrderItem extends Model
     public function order(){
         return $this->belongsTo(Order::class);
     }
+    protected $guarded = [
+        'id'
+    ];
+    public function menu(){
+        return $this->belongsTo(Menu::class);
+    }
 }
